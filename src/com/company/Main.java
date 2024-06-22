@@ -20,25 +20,25 @@ public class Main {
         String res;
         res = (String) a.get(n);
         StringBuilder sb = new StringBuilder();
-        sb.append("Get ArrayList element_").append(n).append(" = ").append(res).append(" за ").append(System.nanoTime()-start).append(" нано сек");
+        sb.append("Get ArrayList element_").append(n).append(" = ").append(res).append("  за ").append(System.nanoTime()-start).append(" нано сек В теории сложность O(1) - константная");
         System.out.println(sb.toString());
 
         start = System.nanoTime();
         res = (String) b.get(n);
         sb = new StringBuilder();
-        sb.append("Get LinkedList element_").append(n).append(" = ").append(res).append(" за ").append(System.nanoTime()-start).append(" нано сек");
+        sb.append("Get LinkedList element_").append(n).append(" = ").append(res).append(" за ").append(System.nanoTime()-start).append(" нано сек В теории сложность O(N) - линейная");
         System.out.println(sb.toString());
 
         start = System.nanoTime();
         a.add(n, "3");
         sb = new StringBuilder();
-        sb.append("Add to ArrayList element_").append(n).append(" за ").append(System.nanoTime()-start).append(" нано сек");
+        sb.append("Add to ArrayList element_").append(n).append("   за ").append(System.nanoTime()-start).append(" нано сек В теории сложность O(1) - константная, но может быть больше");
         System.out.println(sb.toString());
 
         start = System.nanoTime();
         b.add(n, "3");
         sb = new StringBuilder();
-        sb.append("Add to LinkedList element_").append(n).append(" за ").append(System.nanoTime()-start).append(" нано сек");
+        sb.append("Add to LinkedList element_").append(n).append("  за ").append(System.nanoTime()-start).append(" нано сек В теории сложность O(1) - константная");
         System.out.println(sb.toString());
 
         start = System.nanoTime();
@@ -46,7 +46,7 @@ public class Main {
             a.add(n+i, "3");
         }
         sb = new StringBuilder();
-        sb.append("Add package to ArrayList from element_").append(n).append("                за ").append(System.nanoTime()-start).append(" нано сек");
+        sb.append("Add package to ArrayList from element_").append(n).append("                за ").append(System.nanoTime()-start).append(" нано сек В теории сложность O(1) - константная, но может быть больше");
         System.out.println(sb.toString());
 
         start = System.nanoTime();
@@ -54,7 +54,7 @@ public class Main {
             b.add(n+i, "3");
         }
         sb = new StringBuilder();
-        sb.append("Add package to LinkedList from element_").append(n).append("               за ").append(System.nanoTime()-start).append(" нано сек");
+        sb.append("Add package to LinkedList from element_").append(n).append("               за ").append(System.nanoTime()-start).append(" нано сек В теории сложность O(N) - линейная");
         System.out.println(sb.toString());
 
         start = System.nanoTime();
@@ -69,7 +69,7 @@ public class Main {
             }
         }
         sb = new StringBuilder();
-        sb.append("Add package to LinkedList from element_").append(n).append(" with Iterator за ").append(System.nanoTime()-start).append(" нано сек");
+        sb.append("Add package to LinkedList from element_").append(n).append(" with Iterator за ").append(System.nanoTime()-start).append(" нано сек В теории сложность O(1) - константная");
         System.out.println(sb.toString());
         System.out.println(b.get(n));
     }
